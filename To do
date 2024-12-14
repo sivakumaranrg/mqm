@@ -1,0 +1,7 @@
+Create instances in any cloud platform
+check wget is installed on it
+use below link to download the mqm package
+    sudo yum install python3-pip -y
+    pip3 install gdown
+
+    gdown "https://drive.google.com/uc?id=1eLVyKF1MgQCvmPAJ2ndP_jjHFHUMHdyU" -O IBM-MQTRIAL-LinuxX64.tar.gz
