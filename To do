@@ -5,3 +5,73 @@ use below link to download the mqm package
     pip3 install gdown
 
     gdown "https://drive.google.com/uc?id=1eLVyKF1MgQCvmPAJ2ndP_jjHFHUMHdyU" -O IBM-MQTRIAL-LinuxX64.tar.gz
+
+Set-hostname:
+hostnamectl set-hostname siva1.training.com
+hostname siva1.training.com
+
+Verify:
+hostname
+hostnamectl
+
+Add both hostnames to the /etc/hosts 
+172.31.93.121   siva1.training.com
+172.31.93.7     siva2.training.com
+
+All per requisites are completed
+------------------------------------------
+
+Create mqm user - useradd mqm
+check mqm user - id mqm
+
+Create /var/mqm & /opt/mqm -- optional for now
+
+untar the package - tar -xvf
+
+A new directory MQServer will be created - cd MQServer
+
+Accept licence - ./mqlicense.sh -accept
+
+Install these packeges - rpm -ivh MQSeriesRuntime-9.3.0-0.x86_64.rpm MQSeriesSDK-9.3.0-0.x86_64.rpm MQSeriesSamples-9.3.0-0.x86_64.rpm MQSeriesServer-9.3.0-0.x86_64.rpm MQSeriesJava-9.3.0-0.x86_64.rpm MQSeriesJRE-9.3.0-0.x86_64.rpm MQSeriesGSKit-9.3.0-0.x86_64.rpm
+OUTPUT:
+[root@siva1 MQServer]# rpm -ivh MQSeriesRuntime-9.3.0-0.x86_64.rpm MQSeriesSDK-9.3.0-0.x86_64.rpm MQSeriesSamples-9.3.0-0.x86_64.rpm MQSeriesServer-9.3.0-0.x86_64.rpm MQSeriesJava-9.3.0-0.x86_64.rpm MQSeriesJRE-9.3.0-0.x86_64.rpm MQSeriesGSKit-9.3.0-0.x86_64.rpm
+warning: MQSeriesRuntime-9.3.0-0.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID 0209b828: NOKEY
+Verifying...                          ################################# [100%]
+Preparing...                          ################################# [100%]
+grep: warning: stray \ before white space
+Updating / installing...
+   1:MQSeriesRuntime-9.3.0-0          ################################# [ 14%]
+Warning : package "MQSeriesRuntime" is signed but key is not installed on this system.
+          rpm verify shows "Header V3 RSA/SHA256 Signature, key ID 0209b828: NOKEY"
+          rpm warning message may have been issued at install time.
+          See topic "IBM MQ code signatures" in the IBM MQ documentation for more information.
+grep: warning: stray \ before white space
+   2:MQSeriesGSKit-9.3.0-0            ################################# [ 29%]
+grep: warning: stray \ before white space
+   3:MQSeriesServer-9.3.0-0           ################################# [ 43%]
+Updated PAM configuration in /etc/pam.d/ibmmq
+
+WARNING: System settings for this system do not meet recommendations for this product
+         See the log file at "/tmp/mqconfig.2971.log" for more information
+
+grep: warning: stray \ before white space
+   4:MQSeriesSDK-9.3.0-0              ################################# [ 57%]
+grep: warning: stray \ before white space
+   5:MQSeriesSamples-9.3.0-0          ################################# [ 71%]
+grep: warning: stray \ before white space
+   6:MQSeriesJava-9.3.0-0             ################################# [ 86%]
+grep: warning: stray \ before white space
+   7:MQSeriesJRE-9.3.0-0              ################################# [100%]
+[root@siva1 MQServer]#
+
+Check the packages installed - rpm -qa | grep -i mq
+
+Set default - /opt/mqm/bin/setmqinst -i -p /opt/mqm/
+UnSet default - /opt/mqm/bin/setmqinst -x -p /opt/mqm/ -- optional if needed
+
+check version - dspmqver
+
+
+
+
+
