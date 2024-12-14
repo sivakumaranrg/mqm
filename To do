@@ -6,6 +6,15 @@ use below link to download the mqm package
 
     gdown "https://drive.google.com/uc?id=1eLVyKF1MgQCvmPAJ2ndP_jjHFHUMHdyU" -O IBM-MQTRIAL-LinuxX64.tar.gz
 
+IBM Site:
+https://www.ibm.com/resources/mrs/assets/DownloadList?source=ibmmqtrial&lang=en_US
+
+Linux:
+https://iwm.dhe.ibm.com/sdfdl/v2/regs2/mqspacs/ww/mqtrial/Xa.2/Xb.cE2aseOAm9CuzPkAiRC3Y4FNU8f5BkgszvYW4XwOjLA/Xc.ww/mqtrial/9.4.0.0-IBM-MQTRIAL-LinuxX64.tar.gz/Xd./Xf.lPr.D1vk/Xg.13127897/Xi.ibmmqtrial/XY.regsrvs/XZ.pDZB8hIgMVklUE1uvvXZCI0rNmkeWrsu/9.4.0.0-IBM-MQTRIAL-LinuxX64.tar.gz
+Windows:
+https://iwm.dhe.ibm.com/sdfdl/v2/regs2/mqspacs/ww/mqtrial/Xa.2/Xb.cE2aseOAm9CuzPkAiRC3Y4FNU8f5BkgszvYW4XyTyH4/Xc.ww/mqtrial/9.4.0.0-IBM-MQTRIAL-Win64.zip/Xd./Xf.lPr.D1vk/Xg.13127897/Xi.ibmmqtrial/XY.regsrvs/XZ.uLf13A_V60nn4EH5MVBXZjAU8AcE1qkc/9.4.0.0-IBM-MQTRIAL-Win64.zip
+
+
 Set-hostname:
 hostnamectl set-hostname siva1.training.com
 hostname siva1.training.com
