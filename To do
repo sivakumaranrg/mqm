@@ -71,6 +71,55 @@ UnSet default - /opt/mqm/bin/setmqinst -x -p /opt/mqm/ -- optional if needed
 
 check version - dspmqver
 
+Switch as mqm user
+
+dspmq
+crtmqm siva
+strmqm siva
+dltmqm siva
+
+runmqsc siva
+end
+
+DISPLAY QMGR
+DISPLAY QLOCAL(*)
+DISPLAY QREMOTE(*)
+DISPLAY CHANNEL(*)
+DISPLAY LISTENER(*)
+DISPLAY QALIAS(*)
+
+AMQ8426I: Valid MQSC commands are:
+
+    ALTER
+    CLEAR
+    DEFINE
+    DELETE
+    DISPLAY
+    END
+    EXIT
+    PING
+    PURGE
+    QUIT
+    REFRESH
+    RESET
+    RESOLVE
+    RESUME
+    SET
+    START
+    STOP
+    SUSPEND
+
+DEFINE QLOCAL(TEST)
+DISPLAY QLOCAL(TEST)
+
+cd /opt/mqm/samp/bin
+./amqsput QL QMGR
+
+./amqsput TEST siva
+
+./amqsget TEST siva
+
+
 
 
 
